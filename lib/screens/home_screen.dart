@@ -1,4 +1,3 @@
-import 'home_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,8 +17,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             TextField(
+              style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                hintText: "Search Mobile Number",
+                hintText: "Enter Mobile Number",
+                hintStyle: const TextStyle(color: Colors.grey),
                 prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -27,13 +28,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Card(
-              child: ListTile(
-                leading: const CircleAvatar(
-                  child: Icon(Icons.person),
-                ),
-                title: const Text("No Search Yet"),
-                subtitle: const Text("Search a number to see details"),
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text("Search Number"),
               ),
             ),
           ],
